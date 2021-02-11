@@ -1,5 +1,4 @@
-(()=>{
-
+(()=>{          // Olá Galerinha da CDL :)
     const btn = document.querySelector('#imc-btn');
     btn.addEventListener('click',()=> {
         const resultado = document.querySelectorAll('.result');
@@ -9,9 +8,7 @@
         let t = 0;
         let txt = '';
         resultTxt.style.color = '#000000d2';
-
         t = massa.value / (Math.pow(altura.value,2));
-        
         if(isFinite(t)) {
             if (t<18.5) {
                 txt = 'Magreza';
@@ -39,8 +36,6 @@
         result.innerHTML = t.toFixed(2);
         resultTxt.innerHTML = txt;
     });
-
-
 })();
 
 /*  Magreza, quando o resultado é menor que 18,5 kg/m2;

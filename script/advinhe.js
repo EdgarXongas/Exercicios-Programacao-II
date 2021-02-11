@@ -44,7 +44,6 @@
                     count = 0;
                 }
             }
-
         } else {
             txt = 'Digite um número entre 1 a 100';
         }
@@ -60,5 +59,4 @@
         result.innerHTML = 'Tentativas: ' + count;
         let iv = document.querySelector('.adivinhe-ipt').value = '';
     });
-
 })();

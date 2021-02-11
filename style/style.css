@@ -1,5 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+:root {
+    --green: #00ff0d9c;
+    --yellow: #fbff00;
+    --red: #ff0000;
+    --black: #000000cc;
+    --green-nav: #05ad0d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,13 +31,14 @@ html {
     transition: all 1s;
 }
 #root:hover {
-    box-shadow: 1px 1px 10px #63ff6a, -1px -1px 10px #63ff6a;
+    box-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
 }
 body {
     background: #f9f9f9;
 }
-          /*  Home  */
-
+                      
+                            /* Nav Bar */
+ 
 nav {
     background: #fff;
     padding: 10px 10%;
@@ -45,19 +55,20 @@ nav {
     margin-bottom: 5px;
 }
 .logo:hover {
-    color: #05ad0d;
+    color: var(--green-nav);
 }
 .nav-link {
     text-decoration: none;
-    color: #000000ab;
-    margin: 0 10px;
+    color: var(--black);
+    margin: 0 15px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
     transition: all .3s ease .2s;
+    font-family: sans-serif;
 }
 .nav-link:hover {
-    color: #05ad0d;
+    color: var(--green-nav);
 }
 #nav-btn {
     font-size: 20px;
@@ -73,10 +84,13 @@ nav {
 #nav-btn:hover {
     background: #fff;
 }
+
+                                /*   Home Page   */
+
 .home-head {
     font-size: 30px;
     margin-bottom: 30px;
-    color: #000000b9;
+    color: var(--black);
 }
 .home-con {
     display: flex;
@@ -94,11 +108,11 @@ nav {
     font-weight: 400;
     border-radius: 5px;
     margin: 5px 0;
-    border: 1px solid #00ff0d9c;
+    border: 2px solid #00ff0d9c;
     cursor: pointer;
     transition: all .3s ease .2s;
-    color: rgba(0, 0, 0, 0.575);
-    background: #00ff0d9c;
+    color: var(--black);
+    background: var(--green);
 }
 .home-btn:hover {
     background: #fff;
@@ -106,7 +120,11 @@ nav {
 a {
     text-decoration: none;
 }
-         /*  Conversor  */
+
+
+                       /*  Conversor  */
+
+
 .conversor-con {
     padding: 50px !important;
 }
@@ -122,11 +140,13 @@ a {
 #ipt {
     width: 300px;
     text-align: center;
+    font-weight: 500;
     font-size: 25px;
     letter-spacing: 8px;
     line-height: 35px;
-    border: 2px solid #00ff0d9c;
+    border: 2px solid var(--green);
     outline: none;
+    padding-left: 25px;
 }
 #btn {
     width: 110px;
@@ -134,8 +154,9 @@ a {
     font-weight: 100;
     letter-spacing: 2px;
     cursor: pointer;
-    border: 2px solid #00ff0d9c;
-    background: #00ff0d9c;
+    border: 2px solid var(--green);
+    background: var(--green);
+    color: var(--black);
     transition: all .5s;
     margin-left: 2px;
 }
@@ -149,14 +170,14 @@ a {
 .result-container {
     display: flex;
     line-height: 50px;
-    border: 2px solid #fbff00;
+    border: 2px solid var(--yellow);
 }
 .p-container {
     width: 110px;
     font-size: 20px;
     letter-spacing: 1px;
     text-align: center;
-    background: #fbff00;
+    background: var(--yellow);
     color: #000000c0;
 }
 #result {
@@ -167,7 +188,7 @@ a {
 }
 
 
-/* I M C */
+                        /* I M C */
 
 .imc-container {
     display: flex;
@@ -182,26 +203,37 @@ a {
     text-align: center;
     letter-spacing: 20px;
     font-size: 100px;
+    color: var(--black);
+}
+.imc-ipt-con {
+    display: flex;
+}
+.imc-ipt-con div p {
+    transform: translate(2%,90%);
+    font-family: sans-serif;
+    color: #00000080;
 }
 .imc-ipt {
     text-align: center;
-    width: 120px;
+    width: 122px;
     outline: none;
-    border: none;
-    font-size: 35px;
+    border: 1px solid blue;
+    font-size: 25px;
     font-weight: 100;
-    margin: 0 10px 5px 10px;
     letter-spacing: 3px;
+    border-radius: 5px;
+    margin: 20px 2px 10px 2px;
+    height: 50px;
 }
 #imc-btn {
     display: block;
-    margin: 20px 0;
+    margin-bottom: 20px;
     width: 250px;
     height: 60px;
-    background: #63ff6a;
-    border: 1px solid #63ff6a;
+    background: var(--green);
+    border: 1px solid var(--green);
     font-size: 30px;
-    color: #000000bd;
+    color: var(--black);
     border-radius: 5px;
     letter-spacing: 5px;
     transition: all .4s ease .3s;
@@ -212,12 +244,12 @@ a {
 }
 .result, .resut-imcP {
     margin: 5px 0;
-    color: #000000d2;
+    color: var(--black);
     font-size: 40px;
     letter-spacing: 1px;
 }
 
-/*  Advinhe Style   */
+                   /*  Advinhe Número   */
 
 .adivinhe-con {
     display: flex;
@@ -229,10 +261,12 @@ a {
 .advinhe-heading {
     font-size: 40px;
     letter-spacing: 3px;
+    color: var(--black);
 }
 .adivinhe-countTxt, .adivinhe-count {
     font-size: 30px;
     transition: all 1s ease;
+    color: var(--black);
 }
 .adivinhe-ipt {
     text-align: center;
@@ -249,9 +283,9 @@ a {
     font-weight: 500;
     display: block;
     height: 50px;
-    border: 1px solid #63ff6a;
-    background: #63ff6a;
-    color: rgba(0, 0, 0, 0.733);
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: var(--black);
     border-radius: 5px;
     cursor: pointer;
     transition: all .4s ease .2s;
@@ -265,9 +299,9 @@ a {
     font-weight: 500;
     display: block;
     height: 50px;
-    border: 1px solid #fbff00;
-    background: #fbff00;
-    color: rgba(0, 0, 0, 0.733);
+    border: 1px solid var(--yellow);
+    background: var(--yellow);
+    color: var(--black);
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
