@@ -141,10 +141,10 @@ a {
     width: 300px;
     font-weight: 500;
     font-size: 27px;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
     border: 2px solid var(--green);
     outline: none;
-    padding-left: 25px;
+    padding-left: 32px;
 }
 #btn {
     width: 110px;
@@ -160,6 +160,7 @@ a {
 }
 #btn:hover {
     background: #fff;
+    border: 2px solid var(--green);
 }
 #btn, #ipt, .result-container {
     height: 50px;
