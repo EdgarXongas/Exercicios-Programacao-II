@@ -1,4 +1,5 @@
-(()=>{          // Olá Galerinha da CDL :)
+                // Olá Galerinha da CDL =)
+(()=>{          
     const btn = document.querySelector('#imc-btn');
     btn.addEventListener('click',()=> {
         const resultado = document.querySelectorAll('.result');

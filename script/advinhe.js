@@ -1,10 +1,10 @@
+                // Olá Galerinha da CDL =)
 (() => {
-
     const btn = document.querySelector('.adivinhe-btn');
+    const reset = document.querySelector('.reset-btn');
     let rand = Math.floor(Math.random() * 100);
     let resultTxt = document.querySelector('.adivinhe-countTxt');
     let result = document.querySelector('.adivinhe-count');
-    let reset = document.querySelector('.reset-btn');
     let teste = document.querySelector('.adivinhe-ipt');
 
     teste.addEventListener('keyup',(event)=>{
@@ -47,7 +47,6 @@
         } else {
             txt = 'Digite um número entre 1 a 100';
         }
-        console.log(ipt, rand);
         resultTxt.innerHTML = txt;
         result.innerHTML = 'Tentativas: ' + count;
     });
@@ -57,6 +56,6 @@
         rand =  Math.floor(Math.random() * 100);
         resultTxt.innerHTML = 'Entre 1 a 100';
         result.innerHTML = 'Tentativas: ' + count;
-        let iv = document.querySelector('.adivinhe-ipt').value = '';
+        document.querySelector('.adivinhe-ipt').value = '';
     });
 })();
