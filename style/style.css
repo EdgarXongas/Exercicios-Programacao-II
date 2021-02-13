@@ -8,7 +8,6 @@
     --black: #000000cc;
     --green-nav: #05ad0d;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +16,8 @@
 html {
     scroll-behavior: smooth;
     user-select: none;
+    font-family: sans-serif;
+    outline: none;
 }
 #root {
     position: absolute;
@@ -80,12 +81,13 @@ nav {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.63);
     letter-spacing: 2px;
+    outline: none;
 }
 #nav-btn:hover {
     background: #fff;
 }
 
-                                /*   Home Page   */
+                       /*   Home Page   */
 
 .home-head {
     font-size: 30px;
@@ -113,6 +115,8 @@ nav {
     transition: all .2s ease .1s;
     color: var(--black);
     background: var(--green);
+    outline: none;
+
 }
 .home-btn:hover {
     background: #fff;
@@ -138,13 +142,13 @@ a {
     margin: 5px 0;
 }
 #ipt {
-    width: 300px;
-    font-weight: 500;
+    width: 350px;
     font-size: 27px;
     letter-spacing: 5px;
     border: 2px solid var(--green);
     outline: none;
-    padding-left: 32px;
+    text-align: center;
+    color: var(--black);
 }
 #btn {
     width: 110px;
@@ -157,6 +161,7 @@ a {
     color: var(--black);
     transition: all .2s ease .1s;
     margin-left: 2px;
+    outline: none;
 }
 #btn:hover {
     background: #fff;
@@ -172,7 +177,7 @@ a {
     border: 2px solid var(--yellow);
 }
 .p-container {
-    width: 110px;
+    width: 120px;
     font-size: 20px;
     letter-spacing: 1px;
     text-align: center;
@@ -180,10 +185,11 @@ a {
     color: var(--black);
 }
 #result {
-    margin-left: 30px;
+    margin-left: 50px;
     font-size: 20px;
     letter-spacing: 3px;
-    color: #000000cc;
+    color: var(--black);
+    
 }
 
 
@@ -214,7 +220,7 @@ a {
     text-align: center;
     width: 122px;
     outline: none;
-    border: 1px solid blue;
+    border: 1px solid #0000ffe1;
     font-size: 25px;
     font-weight: 100;
     letter-spacing: 3px;
@@ -234,6 +240,7 @@ a {
     border-radius: 5px;
     letter-spacing: 5px;
     transition: all .2s ease .2s;
+    outline: none;
 }
 #imc-btn:hover {
     cursor: pointer;
@@ -269,7 +276,7 @@ a {
     font-size: 25px;
     height: 50px;
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 1px solid #0000ffe1;
     margin: 5px 0;
     outline: none;
 }
@@ -300,6 +307,7 @@ a {
     color: var(--black);
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
     margin-top: 5px;
     transition: all .2s ease .2s;
 }
@@ -311,6 +319,6 @@ a {
     font-size: 100px;
 }
 .venceu {
-    color: rgb(21, 255, 0);
+    color: var(--green);
     font-size: 100px;
 }

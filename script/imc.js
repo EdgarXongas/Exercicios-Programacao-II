@@ -1,41 +1,34 @@
-                // Olá Galerinha da CDL =)
-(()=>{          
+(()=>{            // Olá Galerinha da CDL =)
     const btn = document.querySelector('#imc-btn');
     btn.addEventListener('click',()=> {
-        const resultado = document.querySelectorAll('.result');
-        const [result,resultTxt] = resultado;
+        const resultados = document.querySelectorAll('.result');
+        const [resultado,resultadoTexto] = resultados;
         let ipts = document.querySelectorAll('.imc-ipt');
         let [massa,altura] = ipts;
-        let t = 0;
+        let imc = massa.value / (Math.pow(altura.value,2));
+        resultadoTexto.style.color = '#000000d2';
         let txt = '';
-        resultTxt.style.color = '#000000d2';
-        t = massa.value / (Math.pow(altura.value,2));
-        if(isFinite(t)) {
-            if (t<18.5) {
-                txt = 'Magreza';
-               resultTxt.style.color = '#dfe233';
-            } else if (t>=18.5 && t<=24.9) {
-                txt = 'Normal';
-                resultTxt.style.color = '#63ff6a';
-            } else if(t>=24.9 && t<=30) {
-                txt = 'Sobrepeso';
-                resultTxt.style.color = '#dfe233';
-            } else if(t>=30 && t<=35) {
-                txt = 'Obesidade I';
-                resultTxt.style.color = 'yellow';
-            } else if(t>=35 && t<=40) {
-                txt = 'Obesidade II';
-                resultTxt.style.color = 'orange';
+        let cor = '';
+        if(isFinite(imc)) {
+            if (imc<18.5) {
+                txt = 'Magreza';       cor = '#dfe233';
+            } else if (imc>=18.5 && imc<=24.9) {
+                txt = 'Normal';        cor = '#63ff6a';
+            } else if(imc>=24.9 && imc<=30) {
+                txt = 'Sobrepeso';     cor = '#dfe233';
+            } else if(imc>=30 && imc<=35) {
+                txt = 'Obesidade I';   cor = 'yellow';
+            } else if(imc>=35 && imc<=40) {
+                txt = 'Obesidade II';  cor = 'orange';
             } else {
-                txt = 'Obesidade III';
-                resultTxt.style.color = 'red';
+                txt = 'Obesidade III'; cor = 'red';
             }
         } else {
-            t = 0;
-            txt = 'Digite valores válidos';
+            imc = 0; txt = 'Digite valores válidos';
         }
-        result.innerHTML = t.toFixed(2);
-        resultTxt.innerHTML = txt;
+        resultado.innerHTML = imc.toFixed(2);
+        resultadoTexto.innerHTML = txt;
+        resultadoTexto.style.color = cor;
     });
 })();
 
