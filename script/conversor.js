@@ -10,7 +10,7 @@
         result.innerHTML = data;
     });
 
-    /* Show-Hide script */
+           /* Show-Hide script */
 
     let sh = document.querySelector('.show-hide');
     let r = document.querySelector('.container');

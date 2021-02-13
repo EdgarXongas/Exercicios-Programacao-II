@@ -30,7 +30,8 @@
         resultadoTexto.innerHTML = txt;
         resultadoTexto.style.color = cor;
     });
-    /* Show-Hide script */
+
+                /* Show-Hide script */
 
     let sh = document.querySelector('.show-hide');
     let r = document.querySelector('.container');
