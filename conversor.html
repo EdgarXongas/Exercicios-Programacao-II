@@ -10,30 +10,36 @@
 </head>
 
 <body>
-    <nav>
-        <a href="/index.html">
-            <p class="logo">X</p>
-        </a>
-        <div>
-            <a class="nav-link" href="/index.html">Home</a>
-            <a class="nav-link" href="/conversor.html">Conversor</a>
-            <a class="nav-link" href="/adivinhe.html">Adivinhe o Número</a>
-            <a class="nav-link" href="/imc.html">Seu IMC</a>
-        </div>
-        <input id="nav-btn" type="button" value="Sobre">
-    </nav>
-    <div class="conversor-con" id="root">
-        <p class="conversor-heading">Converter idade para dias</p>
-        <div class="ipt-con">
-            <input id="ipt" type="date">
-            <button id="btn">Calcular</button>
-        </div>
-        <div class="result-container">
-            <div class="p-container">
-                <p>Resultado:</p>
+    <div>
+        <nav>
+            <a href="/index.html">
+                <p class="logo">X</p>
+            </a>
+            <div>
+                <a class="nav-link" href="/index.html">Home</a>
+                <a class="nav-link" href="/conversor.html">Conversor</a>
+                <a class="nav-link" href="/adivinhe.html">Adivinhe o Número</a>
+                <a class="nav-link" href="/imc.html">Seu IMC</a>
             </div>
-            <span id="result"></span>
+            <input id="nav-btn" type="button" value="Sobre">
+        </nav>
+        <div class="conversor-con container">
+            <p class="conversor-heading">Converter idade para dias</p>
+            <div class="ipt-con">
+                <input id="ipt" type="date">
+                <button id="btn">Calcular</button>
+            </div>
+            <div class="result-container">
+                <div class="p-container">
+                    <p>Resultado:</p>
+                </div>
+                <span id="result"></span>
+            </div>
         </div>
+        <div class="img-con">
+            <img width="700" src="/imagens/conversorScript1.png" alt="script"> 
+    </div>
+    <input class="show-hide" type="button" value="Mostrar Script">
     </div>
     <script src="/script/conversor.js"></script>
 </body>

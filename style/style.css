@@ -7,6 +7,8 @@
     --red: #ff0000;
     --black: #000000cc;
     --green-nav: #05ad0d;
+    --white: #fff;
+    --white2: #f9f9f9;
 }
 * {
     margin: 0;
@@ -18,30 +20,31 @@ html {
     user-select: none;
     font-family: sans-serif;
     outline: none;
+    overflow: hidden;
 }
-#root {
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 40px;
-    background: #fff;
+    background: var(--white);
     border-radius: 5px;
     box-shadow: 0 5px 5px #0000001a;
     min-width: 500px;
     transition: all 1s;
 }
-#root:hover {
+.container:hover {
     box-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
 }
 body {
-    background: #f9f9f9;
+    background: var(--white2);
 }
                       
                             /* Nav Bar */
  
 nav {
-    background: #fff;
+    background: var(--white);
     padding: 10px 10%;
     display: flex;
     justify-content: space-between;
@@ -75,8 +78,8 @@ nav {
     font-size: 20px;
     padding: 4px 10px;
     border-radius: 5px;
-    border: 2px solid #00ff0d9c;
-    background: #00ff0d9c;
+    border: 2px solid var(--green);
+    background: var(--green);
     transition: all .2s ease .2s;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.63);
@@ -84,7 +87,7 @@ nav {
     outline: none;
 }
 #nav-btn:hover {
-    background: #fff;
+    background: var(--white);
 }
 
                        /*   Home Page   */
@@ -203,35 +206,35 @@ a {
     min-width: 460px;
 }
 .imc-heading {
-    margin-left: 15px;
-    letter-spacing: 20px;
-    font-size: 100px;
+    padding-left: 15px;
+    letter-spacing: 25px;
+    font-size: 120px;
     color: var(--black);
 }
 .imc-ipt-con {
     display: flex;
 }
 .imc-ipt-con div p {
-    transform: translate(2%,90%);
+    transform: translate(2%,40%);
     font-family: sans-serif;
     color: #00000080;
 }
 .imc-ipt {
     text-align: center;
-    width: 122px;
+    width: 133px;
     outline: none;
     border: 1px solid #0000ffe1;
     font-size: 25px;
     font-weight: 100;
     letter-spacing: 3px;
     border-radius: 5px;
-    margin: 20px 2px 5px 2px;
+    margin: 10px 2px 5px 2px;
     height: 50px;
 }
 #imc-btn {
     display: block;
     margin-bottom: 20px;
-    width: 250px;
+    width: 270px;
     height: 60px;
     background: var(--green);
     border: 1px solid var(--green);
@@ -321,4 +324,38 @@ a {
 .venceu {
     color: var(--green);
     font-size: 100px;
+}
+.img-con {
+    background: #fff;
+    position: absolute;
+    top: 13vh;
+    right: 10px;
+    height: 87vh;
+    transform: translateX(110%);
+    box-shadow: 0 5px 5px #0000001a;
+    overflow-y: scroll;
+    transition: all 1s;
+}
+.show-hide {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    transition: all 1s;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: var(--black);
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    cursor: pointer;
+    background: var(--green);
+    outline: none;
+}
+.move-left {
+    left: 25%;
+}
+.move-img {
+    transform: translateX(0);
 }
