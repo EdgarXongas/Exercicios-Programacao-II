@@ -6,6 +6,7 @@
     --yellow: #fbff00;
     --red: #ff0000;
     --black: #000000cc;
+    --black2: #00000099;
     --green-nav: #05ad0d;
     --white: #fff;
     --white2: #f9f9f9;
@@ -22,25 +23,7 @@ html {
     outline: none;
     overflow: hidden;
 }
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 40px;
-    background: var(--white);
-    border-radius: 5px;
-    box-shadow: 0 5px 5px #0000001a;
-    min-width: 500px;
-    transition: all 1s;
-}
-.container:hover {
-    box-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
-}
-body {
-    background: var(--white2);
-}
-                      
+
                             /* Nav Bar */
  
 nav {
@@ -59,7 +42,10 @@ nav {
     margin-bottom: 5px;
 }
 .logo:hover {
-    color: var(--green-nav);
+    color: var(--black);
+    text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
+
+
 }
 .nav-link {
     text-decoration: none;
@@ -68,11 +54,12 @@ nav {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
-    transition: all .3s ease .3s;
+    transition: all .3s ease .2s;
     font-family: sans-serif;
 }
 .nav-link:hover {
-    color: var(--green-nav);
+    text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
+
 }
 #nav-btn {
     font-size: 20px;
@@ -88,6 +75,24 @@ nav {
 }
 #nav-btn:hover {
     background: var(--white);
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #0000001a;
+    min-width: 500px;
+    transition: all 1s;
+}
+.container:hover {
+    box-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
+}
+body {
+    background: var(--white2);
 }
 
                        /*   Home Page   */
@@ -136,7 +141,7 @@ a {
     padding: 50px !important;
 }
 .conversor-heading {
-    opacity: .75;
+    color: var(--black);
     font-size: 40px;
     margin-bottom: 15px;
 }
@@ -161,7 +166,7 @@ a {
     cursor: pointer;
     border: 2px solid var(--green);
     background: var(--green);
-    color: var(--black);
+    color: var(--black2);
     transition: all .2s ease .1s;
     margin-left: 2px;
     outline: none;
@@ -169,6 +174,7 @@ a {
 #btn:hover {
     background: #fff;
     border: 2px solid var(--green);
+    color: var(--black);
 }
 #btn, #ipt, .result-container {
     height: 50px;
@@ -214,7 +220,7 @@ a {
 .imc-ipt-con {
     display: flex;
 }
-.imc-ipt-con div p {
+#metros, #kg {
     transform: translate(2%,40%);
     font-family: sans-serif;
     color: #00000080;
@@ -223,13 +229,20 @@ a {
     text-align: center;
     width: 133px;
     outline: none;
-    border: 1px solid #0000ffe1;
+    border: 1px solid #00000080;
     font-size: 25px;
     font-weight: 100;
     letter-spacing: 3px;
     border-radius: 5px;
     margin: 10px 2px 5px 2px;
     height: 50px;
+    transition: all .5s;
+}
+.imc-ipt:hover {
+    border: 1px solid blue;
+}
+.imc-ipt:focus {
+    border: 1px solid blue;
 }
 #imc-btn {
     display: block;
@@ -239,7 +252,7 @@ a {
     background: var(--green);
     border: 1px solid var(--green);
     font-size: 30px;
-    color: var(--black);
+    color: var(--black2);
     border-radius: 5px;
     letter-spacing: 5px;
     transition: all .2s ease .2s;
@@ -248,15 +261,16 @@ a {
 #imc-btn:hover {
     cursor: pointer;
     background: #fff;
+    color: var(--black);
 }
 .result, .resut-imcP {
     margin: 5px 0;
-    color: var(--black);
+    color: var(--black2);
     font-size: 40px;
     letter-spacing: 1px;
 }
 
-                   /*  Advinhe Número   */
+                   /*  Adivinhe o Número  */
 
 .adivinhe-con {
     display: flex;
@@ -272,7 +286,7 @@ a {
 .adivinhe-countTxt, .adivinhe-count {
     font-size: 30px;
     transition: all 1s ease;
-    color: var(--black);
+    color: #000000be;
 }
 .adivinhe-ipt {
     text-align: center;
@@ -286,12 +300,11 @@ a {
 .adivinhe-btn {
     font-size: 25px;
     letter-spacing: 2px;
-    font-weight: 500;
     display: block;
     height: 50px;
     border: 1px solid var(--green);
     background: var(--green);
-    color: var(--black);
+    color: var(--black2);
     border-radius: 5px;
     cursor: pointer;
     transition: all .2s ease .2s;
@@ -302,12 +315,11 @@ a {
 .reset-btn {
     font-size: 25px;
     letter-spacing: 2px;
-    font-weight: 500;
     display: block;
     height: 50px;
     border: 1px solid var(--yellow);
     background: var(--yellow);
-    color: var(--black);
+    color: var(--black2);
     border-radius: 5px;
     cursor: pointer;
     outline: none;
@@ -325,16 +337,27 @@ a {
     color: var(--green);
     font-size: 100px;
 }
+
+
+            /*  Botão de Mostrar e Esconder  */
+
 .img-con {
     background: #fff;
     position: absolute;
-    top: 13vh;
-    right: 10px;
-    height: 87vh;
+    top: 15vh;
+    right: 20px;
+    height: 82vh;
     transform: translateX(110%);
     box-shadow: 0 5px 5px #0000001a;
     overflow-y: scroll;
     transition: all 1s;
+    border-radius: 5px;
+}
+.img-con img {
+    width: 632px;
+}
+.img-con:hover {
+    box-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
 }
 .show-hide {
     position: absolute;
@@ -345,13 +368,18 @@ a {
     height: 50px;
     transition: all 1s;
     letter-spacing: 1px;
-    font-size: 20px;
-    color: var(--black);
+    font-size: 22px;
+    font-weight: 100;
+    color: var(--black2);
     border-radius: 5px;
     border: 1px solid var(--green);
     cursor: pointer;
     background: var(--green);
     outline: none;
+}
+.show-hide:hover {
+    background: var(--white);
+    color: var(--black);
 }
 .move-left {
     left: 25%;
