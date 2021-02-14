@@ -18,7 +18,8 @@
         let ipt = document.querySelector('.adivinhe-ipt').value;
         let txt = '';
         teste.focus();
-        if (isFinite(ipt)) {
+        ipt = parseFloat(ipt);
+        if (isFinite(ipt) || ipt == '') {
             if (count <= 0) {
                 txt = 'Clique "Reset" para jogar novamente';
                 resultadoTexto.classList.remove('perdeu','venceu');
