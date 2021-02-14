@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 :root {
-    --green: #00ff0d9c;
+    --green: #00ff0db6;
     --yellow: #fbff00;
     --red: #ff0000;
     --black: #000000cc;
@@ -44,8 +44,6 @@ nav {
 .logo:hover {
     color: var(--black);
     text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
-
-
 }
 .nav-link {
     text-decoration: none;
@@ -60,7 +58,6 @@ nav {
 .nav-link:hover {
     /* text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green); */
     color: var(--green-nav);
-
 }
 #nav-btn {
     font-size: 20px;
@@ -76,6 +73,7 @@ nav {
 }
 #nav-btn:hover {
     background: var(--white);
+    color: var(--black);
 }
 .container {
     position: absolute;
@@ -122,13 +120,15 @@ body {
     border: 2px solid #00ff0d9c;
     cursor: pointer;
     transition: all .2s ease .1s;
-    color: var(--black);
+    color: var(--black2);
     background: var(--green);
     outline: none;
 
 }
 .home-btn:hover {
     background: #fff;
+    color: var(--black);
+
 }
 a {
     text-decoration: none;
@@ -312,6 +312,7 @@ a {
 }
 .adivinhe-btn:hover {
     background: #fff;
+    color: var(--black);
 }
 .reset-btn {
     font-size: 25px;
@@ -329,6 +330,7 @@ a {
 }
 .reset-btn:hover {
     background: #fff;
+    color: var(--black);
 }
 .perdeu {
     color: red;
