@@ -58,7 +58,8 @@ nav {
     font-family: sans-serif;
 }
 .nav-link:hover {
-    text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green);
+    /* text-shadow: 1px 1px 10px var(--green), -1px -1px 10px var(--green); */
+    color: var(--green-nav);
 
 }
 #nav-btn {
