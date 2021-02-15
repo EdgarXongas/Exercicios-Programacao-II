@@ -256,7 +256,7 @@ a {
     color: var(--black2);
     border-radius: 5px;
     letter-spacing: 5px;
-    transition: all .2s ease .2s;
+    transition: all .2s ease .1s;
     outline: none;
 }
 #imc-btn:hover {
@@ -308,7 +308,7 @@ a {
     color: var(--black2);
     border-radius: 5px;
     cursor: pointer;
-    transition: all .2s ease .2s;
+    transition: all .2s ease .1s;
 }
 .adivinhe-btn:hover {
     background: #fff;
@@ -326,7 +326,7 @@ a {
     cursor: pointer;
     outline: none;
     margin-top: 5px;
-    transition: all .2s ease .2s;
+    transition: all .2s ease .1s;
 }
 .reset-btn:hover {
     background: #fff;
