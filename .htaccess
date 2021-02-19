@@ -1,0 +1,8 @@
+
+RewriteEngine on
+
+RewriteCond %{Exercicios-Programacao-II} !-d
+
+RewriteCond %{Exercicios-Programacao-II}\.html -f
+
+RewriteRule ^(.*)$ $1.html [NC,L]
